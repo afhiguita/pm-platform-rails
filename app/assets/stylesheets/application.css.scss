@@ -1,0 +1,30 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require font-awesome
+ *= require limitles-template/layouts/layout_1/default/compile/bootstrap
+ *= require limitles-template/layouts/layout_1/default/compile/bootstrap_limitless.scss
+ *= require limitles-template/layouts/layout_1/default/compile/layout
+ *= require limitles-template/layouts/layout_1/default/compile/components
+ *= require limitles-template/layouts/layout_1/default/compile/colors
+ *
+ * ICONS - Style with CSS
+ *= require icons/icomoon/styles
+ *= require icons/fontawesome/styles.min
+ *= require icons/material/icons
+ *
+ * EXTRAS - Animation with CSS
+ *= require extras/animate.min
+ *
+ *= require_tree .
+ *= require_self
+ */

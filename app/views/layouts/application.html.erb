@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= content_for?(:title) ? yield(:title) : "PM Platform" %></title>
+
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Pro Management Platform" %>">
+    <meta name="apple-mobile-web-app-title" content="Pro Management">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900|Roboto+Slab:400,700|Material+Icons" %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+
+  </head>
+  <body class="navbar-top">
+    <%= render 'layouts/header' %>
+    <!-- Page content -->
+    <div class="page-content">
+      <!-- Main sidebar -->
+      <div class="sidebar sidebar-dark sidebar-main sidebar-fixed sidebar-expand-md">
+        <%= render 'layouts/sidebar' %>
+      </div>
+      <!-- /main sidebar -->
+
+      <!-- Main content -->
+      <div class="content-wrapper">
+        <%= yield %>
+
+        <!-- Footer -->
+        <div class="navbar navbar-expand-lg navbar-light">
+          <div class="text-center d-lg-none w-100">
+            <button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-footer">
+              <i class="icon-unfold mr-2"></i>
+              Footer
+            </button>
+          </div>
+
+          <div class="navbar-collapse collapse" id="navbar-footer">
+					<span class="navbar-text">
+						&copy; 2018. <a href="#">Pro Management</a> by <a href="#" target="_blank">Adrian Higuita</a>
+					</span>
+
+            <ul class="navbar-nav ml-lg-auto">
+              <li class="nav-item">
+                <a href="#" class="navbar-nav-link" target="_blank">
+                  <i class="icon-lifebuoy mr-2"></i> Supporte Tecnico
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="navbar-nav-link" target="_blank">
+                  <i class="icon-file-text2 mr-2"></i> Documentacion
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="navbar-nav-link font-weight-semibold">
+                  <span class="text-pink-400"><i class="icon-cart2 mr-2"></i> Ventas</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /footer -->
+
+      </div>
+      <!-- /main content -->
+    </div>
+  </body>
+</html>
