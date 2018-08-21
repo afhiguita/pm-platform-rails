@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
+gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
@@ -27,8 +28,11 @@ group :development do
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.1.3'
+gem 'autoprefixer-rails', '~> 9.1.2'
 gem 'high_voltage'
 gem 'jquery-rails'
+gem 'popper_js', '~> 1.14.3'
+
 group :development do
   gem 'better_errors'
   gem 'rails_layout'

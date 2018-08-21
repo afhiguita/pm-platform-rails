@@ -171,42 +171,42 @@ $ll-theme-colors: (
     $shade-50: map-get($color-variants, 50);
 
     // Generate .alpha-* classes
-    .alpha-#{$color-key} {
+    .alpha-#{"" + $color-key} {
         @include ll-background-variant($shade-50);
     }
 
     // Generate .text-* classes
-    .text-#{$color-key} {
+    .text-#{"" + $color-key} {
         @include ll-text-color-variant($base-color-value);
     }
 
     // Generate .bg-* classes
-    .bg-#{$color-key} {
+    .bg-#{"" + $color-key} {
         @include ll-background-variant($base-color-value);
     }
 
     // Generate .border-* classes
-    .border-#{$color-key} {
+    .border-#{"" + $color-key} {
         @include ll-border-color-variant($base-color-value);
     }
 
     // Generate .border-top-* classes
-    .border-top-#{$color-key} {
+    .border-top-#{"" + $color-key} {
         @include ll-border-top-color-variant($base-color-value);
     }
 
     // Generate .border-bottom-* classes
-    .border-bottom-#{$color-key} {
+    .border-bottom-#{"" + $color-key} {
         @include ll-border-bottom-color-variant($base-color-value);
     }
 
     // Generate .border-left-* classes
-    .border-left-#{$color-key} {
+    .border-left-#{"" + $color-key} {
         @include ll-border-left-color-variant($base-color-value);
     }
 
     // Generate .border-right-* classes
-    .border-right-#{$color-key} {
+    .border-right-#{"" + $color-key} {
         @include ll-border-right-color-variant($base-color-value);
     }
 
@@ -222,32 +222,32 @@ $ll-theme-colors: (
         @if ($variant-name != 'base' and $variant-name != 50) {
 
             // Generate .text-*-* classes
-            .text-#{$color-key}-#{$variant-name} {
+            .text-#{"" + $color-key}-#{$variant-name} {
                 @include ll-text-color-variant($shade-color-value);
             }
 
             // Generate .bg-*-* classes
-            .bg-#{$color-key}-#{$variant-name} {
+            .bg-#{"" + $color-key}-#{$variant-name} {
                 @include ll-background-variant($shade-color-value);
             }
 
             // Generate .border-*-* classes
-            .border-#{$color-key}-#{$variant-name} {
+            .border-#{"" + $color-key}-#{$variant-name} {
                 @include ll-border-color-variant($shade-color-value);
             }
 
             // Generate .border-top-*-* classes
-            .border-top-#{$color-key}-#{$variant-name} {
+            .border-top-#{"" + $color-key}-#{$variant-name} {
                 @include ll-border-top-color-variant($shade-color-value);
             }
 
             // Generate .border-bottom-*-* classes
-            .border-bottom-#{$color-key}-#{$variant-name} {
+            .border-bottom-#{"" + $color-key}-#{$variant-name} {
                 @include ll-border-bottom-color-variant($shade-color-value);
             }
 
             // Generate .border-left-*-* classes
-            .border-left-#{$color-key}-#{$variant-name} {
+            .border-left-#{"" + $color-key}-#{$variant-name} {
                 @include ll-border-left-color-variant($shade-color-value);
             }
 
