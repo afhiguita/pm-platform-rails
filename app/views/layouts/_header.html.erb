@@ -125,9 +125,10 @@
 
           <div class="dropdown-content-body dropdown-scrollable">
             <ul class="media-list">
+
               <li class="media">
                 <div class="mr-3">
-                  <%= image_tag 'placeholders/placeholder.jpg', class: 'rounded-circle' %>
+                  <%= image_tag 'placeholders/placeholder.jpg', class: 'rounded-circle', width: '36px', height: '36px' %>
                 </div>
                 <div class="media-body">
                   <a href="#" class="media-title font-weight-semibold">Jordana Ansley</a>
@@ -136,55 +137,12 @@
                 <div class="ml-3 align-self-center"><span class="badge badge-mark border-success"></span></div>
               </li>
 
-              <li class="media">
-                <div class="mr-3">
-                  <%= image_tag 'placeholders/placeholder.jpg', class: 'rounded-circle' %>
-                </div>
-                <div class="media-body">
-                  <a href="#" class="media-title font-weight-semibold">Will Brason</a>
-                  <span class="d-block text-muted font-size-sm">Marketing manager</span>
-                </div>
-                <div class="ml-3 align-self-center"><span class="badge badge-mark border-danger"></span></div>
-              </li>
-
-              <li class="media">
-                <div class="mr-3">
-                  <%= image_tag 'placeholders/placeholder.jpg', class: 'rounded-circle' %>
-                </div>
-                <div class="media-body">
-                  <a href="#" class="media-title font-weight-semibold">Hanna Walden</a>
-                  <span class="d-block text-muted font-size-sm">Project manager</span>
-                </div>
-                <div class="ml-3 align-self-center"><span class="badge badge-mark border-success"></span></div>
-              </li>
-
-              <li class="media">
-                <div class="mr-3">
-                  <%= image_tag 'placeholders/placeholder.jpg', class: 'rounded-circle' %>
-                </div>
-                <div class="media-body">
-                  <a href="#" class="media-title font-weight-semibold">Dori Laperriere</a>
-                  <span class="d-block text-muted font-size-sm">Business developer</span>
-                </div>
-                <div class="ml-3 align-self-center"><span class="badge badge-mark border-warning-300"></span></div>
-              </li>
-
-              <li class="media">
-                <div class="mr-3">
-                  <%= image_tag 'placeholders/placeholder.jpg', class: 'rounded-circle' %>
-                </div>
-                <div class="media-body">
-                  <a href="#" class="media-title font-weight-semibold">Vanessa Aurelius</a>
-                  <span class="d-block text-muted font-size-sm">UX expert</span>
-                </div>
-                <div class="ml-3 align-self-center"><span class="badge badge-mark border-grey-400"></span></div>
-              </li>
             </ul>
           </div>
 
           <div class="dropdown-content-footer bg-light">
-            <a href="#" class="text-grey mr-auto">All users</a>
-            <a href="#" class="text-grey"><i class="icon-gear"></i></a>
+            <%= link_to 'All users', users_path, class: 'text-grey mr-auto'%>
+            <%= link_to users_path, class: 'text-grey' do %><i class="icon-gear"></i><% end %>
           </div>
         </div>
       </li>
@@ -206,7 +164,7 @@
             <ul class="media-list">
               <li class="media">
                 <div class="mr-3 position-relative">
-                  <%= image_tag 'placeholders/placeholder.jpg', class: 'rounded-circle' %>
+                  <%= image_tag 'placeholders/placeholder.jpg', class: 'rounded-circle', width: '36px', height: '36px' %>
                 </div>
 
                 <div class="media-body">
@@ -218,71 +176,6 @@
                   </div>
 
                   <span class="text-muted">who knows, maybe that would be the best thing for me...</span>
-                </div>
-              </li>
-
-              <li class="media">
-                <div class="mr-3 position-relative">
-                  <%= image_tag 'placeholders/placeholder.jpg', class: 'rounded-circle' %>
-                </div>
-
-                <div class="media-body">
-                  <div class="media-title">
-                    <a href="#">
-                      <span class="font-weight-semibold">Margo Baker</span>
-                      <span class="text-muted float-right font-size-sm">12:16</span>
-                    </a>
-                  </div>
-
-                  <span class="text-muted">That was something he was unable to do because...</span>
-                </div>
-              </li>
-
-              <li class="media">
-                <div class="mr-3">
-                  <%= image_tag 'placeholders/placeholder.jpg', class: 'rounded-circle' %>
-                </div>
-                <div class="media-body">
-                  <div class="media-title">
-                    <a href="#">
-                      <span class="font-weight-semibold">Jeremy Victorino</span>
-                      <span class="text-muted float-right font-size-sm">22:48</span>
-                    </a>
-                  </div>
-
-                  <span class="text-muted">But that would be extremely strained and suspicious...</span>
-                </div>
-              </li>
-
-              <li class="media">
-                <div class="mr-3">
-                  <%= image_tag 'placeholders/placeholder.jpg', class: 'rounded-circle' %>
-                </div>
-                <div class="media-body">
-                  <div class="media-title">
-                    <a href="#">
-                      <span class="font-weight-semibold">Beatrix Diaz</span>
-                      <span class="text-muted float-right font-size-sm">Tue</span>
-                    </a>
-                  </div>
-
-                  <span class="text-muted">What a strenuous career it is that I've chosen...</span>
-                </div>
-              </li>
-
-              <li class="media">
-                <div class="mr-3">
-                  <%= image_tag 'placeholders/placeholder.jpg', class: 'rounded-circle' %>
-                </div>
-                <div class="media-body">
-                  <div class="media-title">
-                    <a href="#">
-                      <span class="font-weight-semibold">Richard Vango</span>
-                      <span class="text-muted float-right font-size-sm">Mon</span>
-                    </a>
-                  </div>
-
-                  <span class="text-muted">Other travelling salesmen live a life of luxury...</span>
                 </div>
               </li>
             </ul>

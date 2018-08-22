@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
+gem 'devise_invitable'
 gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -32,6 +33,7 @@ gem 'autoprefixer-rails', '~> 9.1.2'
 gem 'high_voltage'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.14.3'
+gem 'paperclip', '~> 4.1'
 
 group :development do
   gem 'better_errors'

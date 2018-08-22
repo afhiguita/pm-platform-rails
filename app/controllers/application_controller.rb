@@ -1,13 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  before_action require_user: :exception 
   before_action :show_flash
-
-  private
-
-  def show_flash
-    flash.now[:notice] = "Found the about page!" if request.path == '/pages/about'
-  end
 
   helper_method :current_user, :logged_in?
 
@@ -22,7 +17,19 @@ class ApplicationController < ActionController::Base
   def require_user
     if !logged_in?
       flash[:danger] = "You must be logged in to perform that action"
-      redirect_to root_path
+      redirect_to login_path
     end
   end
+
+  protected
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :password) }
+      devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :email, :password, :current_password, :is_female, :date_of_birth, :avatar) }
+    end
+
+  private
+    def show_flash
+      flash.now[:notice] = "Found the about page!" if request.path == '/pages/about'
+    end
+
 end

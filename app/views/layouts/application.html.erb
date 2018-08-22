@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title><%= content_for?(:title) ? yield(:title) : "PM Platform" %></title>
 
@@ -30,7 +30,16 @@
 
       <!-- Main content -->
       <div class="content-wrapper">
-        <%= yield %>
+
+        <!-- Page header -->
+        <%= render 'layouts/page_header' %>
+        <!-- /page header -->
+
+        <!-- Content area -->
+        <div class="content">
+          <%= render 'layouts/messages' %>
+          <%= yield %>
+        </div>
 
         <!-- Footer -->
         <div class="navbar navbar-expand-lg navbar-light">
