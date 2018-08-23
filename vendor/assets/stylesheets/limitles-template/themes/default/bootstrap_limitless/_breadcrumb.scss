@@ -195,7 +195,7 @@ a.breadcrumb-item {
 
 // Links
 a.breadcrumb-elements-item {
-    @extend a.breadcrumb-item;
+    @extend a, .breadcrumb-item;
 }
 
 

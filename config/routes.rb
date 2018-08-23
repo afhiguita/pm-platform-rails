@@ -1,13 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  devise_for :users
 
-  root to: 'home#index'
+  root to: 'pages#index'
 
   # user ans sessions controls
-  resources :users, except: [:new]
-  get     'signup', to: 'users#new'
-  get     'login',  to: 'sessions#new'
-  post    'login',  to: 'sessions#create'
-  delete  'logout', to: 'sessions#destroy'
+
 end
