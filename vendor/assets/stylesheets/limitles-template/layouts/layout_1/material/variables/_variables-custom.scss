@@ -41,7 +41,7 @@ $hover-shadow-lighter:                    0 0 0 62.5rem rgba($black, 0.01) inset
 $hover-shadow-darker:                     0 0 0 62.5rem rgba($black, 0.04) inset !default;
 
 // Images
-$img-path:                                '../../../../../../global_assets/images' !default;
+$img-path:                                '../../../../images' !default;
 $img-preview-max-height:                  5rem !default;
 
 // Wrappers for element spacers. Uses default $spacers map
@@ -135,7 +135,7 @@ $page-header-dark-elements-border-color:     $page-header-dark-border-color !def
 $content-container-padding-y:    $spacer !default;
 $content-container-padding-x:    $grid-gutter-width !default;
 
-$boxed-bg:                       url(#{$img-path}/backgrounds/boxed_bg.png) repeat !default;
+$boxed-bg:                       url("#{$img-path}/backgrounds/boxed_bg.png") repeat !default;
 $boxed-container-box-shadow:     -4px 2px 4px rgba($black, 0.15), 4px 2px 4px rgba($black, 0.15) !default;
 
 

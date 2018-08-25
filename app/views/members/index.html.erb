@@ -1,0 +1,41 @@
+<% content_for :title do @members.table_name end%>
+<% content_for :subtitle do 'list' end%>
+
+<table class="table datatable-basic">
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Status</th>
+    <th>Created date</th>
+    <th class="text-center">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @members.each do |u| %>
+  <tr>
+    <td><%= u.firstname %></td>
+    <td><%= u.lastname %></td>
+    <td><%= u.email %></td>
+    <td><%= u.isactive %></td>
+    <td><%= u.created_at %></td>
+    <td>
+      <div class="list-icons">
+        <div class="dropdown">
+          <a href="#" class="list-icons-item" data-toggle="dropdown">
+            <i class="icon-menu9"></i>
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-right">
+            <%= link_to userlist_path, class: 'dropdown-item' do %>
+            <i class="icon-finder"></i> View<% end %>
+            <%= link_to edit_user_registration_path , class: 'dropdown-item' do %>
+              <i class="icon-pencil"></i> Edit<% end %>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <% end %>
+</table>

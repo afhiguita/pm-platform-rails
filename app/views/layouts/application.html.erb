@@ -18,10 +18,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
 
   </head>
-  <body class="navbar-top">
+  <body class="">
+  <% if user_signed_in? %>
     <%= render 'layouts/header' %>
     <!-- Page content -->
-    <div class="page-content">
+    <div class="page-content navbar-top">
       <!-- Main sidebar -->
       <div class="sidebar sidebar-dark sidebar-main sidebar-fixed sidebar-expand-md">
         <%= render 'layouts/sidebar' %>
@@ -79,5 +80,21 @@
       </div>
       <!-- /main content -->
     </div>
+  <% else %>
+    <!-- Page content -->
+    <div class="page-content login-cover">
+      <!-- Main content -->
+      <div class="content-wrapper">
+        <!-- Content area -->
+        <div class="content d-flex justify-content-center align-items-center">
+          <!-- Login form -->
+          <div class="login-form wmin-sm-400">
+            <%= render 'layouts/messages' %>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
   </body>
 </html>

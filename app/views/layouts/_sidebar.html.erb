@@ -21,22 +21,27 @@
     <!-- User menu -->
     <!-- User menu -->
     <div class="sidebar-user">
-      <div class="card-body">
-        <div class="media">
-          <div class="mr-3">
-              <%= link_to image_tag('placeholders/placeholder.jpg', class: 'rounded-circle', height: '38px', width: '38px'), root_path %>
-          </div>
+      <div class="card-body media">
+        <div class="mr-3">
+          <% if current_user.avatar.url.present? %>
+            <%= link_to image_tag(current_user.avatar.url, class: 'rounded-circle', width: "38px", height: "38px"), edit_user_registration_path %>
+          <% else %>
+            <%= link_to image_tag('placeholders/placeholder.jpg', class: 'rounded-circle', height: '38px', width: '38px'), edit_user_registration_path %>
+          <% end %>
 
-          <div class="media-body">
-            <div class="media-title font-weight-semibold">Adrian Higuita</div>
-            <div class="font-size-xs opacity-50">
-              <i class="icon-pin font-size-sm"></i> &nbsp;Santa Ana, CA
-            </div>
-          </div>
+        </div>
 
-          <div class="ml-3 align-self-center">
-            <a href="#" class="text-white"><i class="icon-cog3"></i></a>
+        <div class="media-body">
+          <div class="media-title font-weight-semibold"><%= current_user.firstname.to_s.upcase_first %> <%= current_user.lastname.to_s.upcase_first %></div>
+          <div class="font-size-xs opacity-50">
+            <%= current_user.email.to_s.downcase %>
           </div>
+        </div>
+
+        <div class="ml-3 align-self-center">
+          <%= link_to edit_user_registration_path, class: "text-white" do %>
+            <i class="icon-cog3"></i>
+          <% end %>
         </div>
       </div>
     </div>

@@ -1304,7 +1304,7 @@
 
 	// Add backgroupd image    
     .sidebar-user-material-body {
-		background: url(#{$img-path}/backgrounds/user_bg3.jpg) center center no-repeat;
+		background: url("#{$img-path}/backgrounds/user_bg3.jpg") center center no-repeat;
 	    background-size: cover;
     }
         

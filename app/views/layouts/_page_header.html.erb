@@ -3,14 +3,14 @@
   <div class="page-header-content header-elements-md-inline">
     <div class="page-title d-flex">
       <h4>
-        <%= link_to root_path do %>
+        <%= link_to :back do %>
           <i class="icon-arrow-left52 mr-2"></i>
         <% end %>
         <span class="font-weight-semibold">
           <%= content_for?(:title) ? yield(:title) : "" %>
-        </span> <%= content_for?(:subtitle) ? yield(:subtitle) : "PM Platform" %>
+        </span> <%= content_for?(:subtitle) ? yield(:subtitle) : "Hand Platform" %>
       </h4>
-      <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i>Otra cosa</a>
+      <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
     </div>
 
     <div class="header-elements d-none">
